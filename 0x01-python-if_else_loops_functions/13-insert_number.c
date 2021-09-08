@@ -1,47 +1,34 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * insert_node - inserting node
- * @head: node head
+ * insert_node - inserting a node
+ * @head: head of list
  * @number: number
- * Return: new node or NULL if it failed
+ * Return: the address of the new node, or NULL if it failed
  */
-listint_t *insert_node(listint_t head, int number)
+listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *list_current = NULL, *Newnodo = NULL, temp = NULL;
+	listint_t *nodo;
+	listint_t *new_node;
 
-	Newnodo = malloc(sizeof(listint_t));
-	if (Newnodo == NULL)
+	nodo = *head;
+	new_node = malloc(sizeof(listint_t));
+
+	if (new_node == NULL)
 		return (NULL);
-	Newnodo->n = number;
-	if (head)
+	new_node->n = number;
+	if (nodo == NULL || nodo->n >= number)
 	{
-		list_current = *head;
-		if (number <= list_current->n)
-		{
-			Newnodo->next = list_current;
-			head = Newnodo;
-		}
-		else
-		{
-			while (list_current->next)
-			{
-				if (number <= list_current->next->n)
-				{
-					temp = list_current->next;
-					list_current->next = Newnodo;
-					Newnodo->next = temp;
-					return (head);
-				}
-				list_current = list_current->next;
-			}
-			temp = list_current->next;
-			list_current->next = Newnodo;
-			Newnodo->next = temp;
-		}
-		return (*head);
+		new_node->next = nodo;
+		*head = new_node;
+		return (new_node);
 	}
-	Newnodo->next = NULL;
-	head = Newnodo;
-	return (head);
+	while (nodo && nodo->next && nodo->n < number)
+		nodo = nodo->next;
+	new_node->next = nodo->next;
+	nodo->next = new_node;
+
+	return (new_node);
 }
