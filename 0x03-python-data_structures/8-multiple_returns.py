@@ -2,6 +2,6 @@
 def multiple_returns(sentence):
     leng = len(sentence)
     void = None
-    if leng != "":
+    if sentence != "":
         void = sentence[0]
     return leng, void
