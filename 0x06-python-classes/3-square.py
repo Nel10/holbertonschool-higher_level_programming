@@ -21,4 +21,4 @@ class Square:
         """calculate the square area
         Return:
             the area of the square"""
-        return (sel.__size) ** 2
+        return (self.__size) ** 2
