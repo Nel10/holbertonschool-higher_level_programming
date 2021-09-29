@@ -8,7 +8,7 @@ class Rectangle:
         """inicialisation the Rectangle"""
         self.height = height
         self.width = width
-    
+
     @property
     def width(self):
         """getter Private instance attribute: width"""
@@ -26,7 +26,7 @@ class Rectangle:
     @property
     def height(self):
         """getter Private instance attribute: height"""
-        return self.__heigth
+        return self.__height
 
     @height.setter
     def height(self, value):
