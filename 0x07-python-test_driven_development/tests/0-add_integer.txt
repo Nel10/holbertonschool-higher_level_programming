@@ -9,12 +9,6 @@ to return an addition
 
 Test case:
 ==========
-#
-#   >>> import os
-#  >>> os.access('0-add_integer.py', os.X_OK)
-#   True
-#  >>> os.access('0-add_integer.py', os.F_OK)
-#  True
 
 - Checking normal use with two numbers:
     >>> add_int = __import__("0-add_integer")
