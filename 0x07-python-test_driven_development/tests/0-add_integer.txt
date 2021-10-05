@@ -1,0 +1,40 @@
+# doctest_add_integer.py
+
+==================================
+File information 0-add_integer.py
+==================================
+
+Function that adds 2 integers, uses the "+" operator
+to return an addition
+
+Test case:
+==========
+#
+#   >>> import os
+#  >>> os.access('0-add_integer.py', os.X_OK)
+#   True
+#  >>> os.access('0-add_integer.py', os.F_OK)
+#  True
+
+- Checking normal use with two numbers:
+    >>> add_int = __import__("0-add_integer")
+    >>> add_int.add_integer(5, 4)
+    9
+
+- It also works with floating-point values:
+    >>> add_int.add_integer(2.0, 5)
+    7.0
+
+Non-Numbers:
+============
+The function should throw an error when putting a
+character or a string inside the sum
+
+    >>> add_int.add_integer('a', 5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_int.add_integer(4, "shannel")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
