@@ -1,0 +1,25 @@
+# doctest_3-say_my_name.txt
+
+=================================
+File information 2-matrix_divided
+=================================
+
+Function that prints My name is <first name> <last name>
+
+Test case:
+==========
+
+- Importing the function from module
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+- Checking if the function is not str:
+    >>> say_my_name(1, "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+- Checking if the function is not str:
+    >>> say_my_name("Shannel", 10)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string

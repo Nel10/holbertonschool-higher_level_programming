@@ -4,6 +4,8 @@ function matrix_divided
 parametres: matrix, div
 Return: new matrix
 """
+
+
 def matrix_divided(matrix, div):
     """
     function use matrix and div
@@ -16,7 +18,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     i = 0
     if type(matrix) is not list:
-        raise TypeError("message")
+        raise TypeError(message)
     if not isinstance(matrix[0], list):
         for item in matrix:
             if type(item) not in [int, float]:
@@ -31,6 +33,6 @@ def matrix_divided(matrix, div):
                 if type(item) not in [int, float]:
                     raise TypeError(message)
             i += 1
-        my_list = list(map(lambda row: list(map(lambda item:
-            round(item/div, 2), row)), matrix))
-    return my_list
+        my = matrix.copy()
+        re = list(map(lambda r: list(map(lambda i: round(i/div, 2), r)), my))
+    return re

@@ -17,7 +17,7 @@ Test case:
 
 - It also works with floating-point values:
     >>> add_int.add_integer(2.0, 5)
-    7.0
+    7
 
 Non-Numbers:
 ============
@@ -32,3 +32,11 @@ character or a string inside the sum
     Traceback (most recent call last):
     TypeError: b must be an integer
 
+Float overflow:
+==============
+
+    >>> add_int.add_integer(float("inf"))
+    89
+    
+    >>> add_int.add_integer(float("NaN"), 0)
+    89

@@ -1,0 +1,30 @@
+# doctest_text_indentation.py
+
+======================================
+File information 5-text_indentation.py
+======================================
+
+Function that prints a text with 2 new lines
+after each of these characters: ., ? and :
+
+Test case:
+==========
+
+- Importing the function from module:
+    >>> text = __import__("5-text_indentation").text_indentation
+
+- Checking normal use:
+    >>> text("HELLO SHANNEL")
+    HELLO SHANNEL
+    
+    >>> text("hello. hi?")
+    hello.
+    <BLANKLINE>
+    hi?
+    <BLANKLINE>
+
+- Checking if is int:
+    >>> text(2)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string 

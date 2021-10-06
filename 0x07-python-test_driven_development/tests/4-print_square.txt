@@ -1,0 +1,30 @@
+# doctest_4-print_square.txt
+
+=================================
+File information 2-matrix_divided
+=================================                                          
+
+function that prints a square with the character #
+
+Test case:
+==========
+
+- Importing the function from module
+    >>> print_square = __import__("4-print_square").print_square
+
+- Checking if the function is not int:
+    >>> print_square("h")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+- Checking if the function is negative
+    >>> print_square(-4)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+- Checking normal use the function:
+    >>> print_square(2)
+    ##
+    ##
