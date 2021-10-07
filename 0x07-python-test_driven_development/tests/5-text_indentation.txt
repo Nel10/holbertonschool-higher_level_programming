@@ -11,9 +11,11 @@ Test case:
 ==========
 
 - Importing the function from module:
+
     >>> text = __import__("5-text_indentation").text_indentation
 
 - Checking normal use:
+
     >>> text("HELLO SHANNEL")
     HELLO SHANNEL
     
@@ -24,7 +26,35 @@ Test case:
     <BLANKLINE>
 
 - Checking if is int:
+
     >>> text(2)
     Traceback (most recent call last):
     ...
-    TypeError: text must be a string 
+    TypeError: text must be a string
+
+- Checking if the function dont have arguments:
+
+    >>> text()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+- Checking when is None:
+
+    >>> text(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+- Checking other test:
+    
+    >>> text(float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
