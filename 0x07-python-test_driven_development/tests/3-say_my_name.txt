@@ -23,3 +23,13 @@ Test case:
     Traceback (most recent call last):
     ...
     TypeError: last_name must be a string
+
+- Checking only one argument:
+    >>> say_my_name("Shannel")
+    My name is Shannel
+
+- Checking with 3 arguments:
+    >>> say_my_name("Shannel", "Bejarano", "CH15")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given

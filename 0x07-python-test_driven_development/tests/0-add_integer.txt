@@ -19,6 +19,9 @@ Test case:
     >>> add_int.add_integer(2.0, 5)
     7
 
+    >>> add_int.add_integer(2)
+    100
+
 Non-Numbers:
 ============
 The function should throw an error when putting a
