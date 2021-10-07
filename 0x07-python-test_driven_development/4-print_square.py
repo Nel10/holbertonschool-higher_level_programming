@@ -4,6 +4,8 @@ Function print_square
 parametres: size
 Return: square with '#'
 """
+
+
 def print_square(size):
     """
     function print_square
