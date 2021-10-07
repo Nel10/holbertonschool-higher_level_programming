@@ -23,11 +23,18 @@ class TestMaxInteger(unittest.TestCase):
       self.assertRaises(TypeError, max_integer, [1, 2, "hi", 3])
       self.assertRaises(TypeError, max_integer, [1, 2, ["Shannel"], 3])
 
-      text_list = [1, 2, False, 3]
+      test_list = [1, 2, False, 3]
       self.assertRaises(TypeError)
 
-      text_list = [7, 78, True, 3]
+      test_list = [7, 78, True, 3]
       self.assertRaises(TypeError)
+
+      test_list = "goodnight"
+      self.assertEqual(max_integer(test_list), 't')
+
+      test_list = None
+      self.assertRaises(TypeError)
+
 
 if __name__ == '__main__':
     unittest.main()
