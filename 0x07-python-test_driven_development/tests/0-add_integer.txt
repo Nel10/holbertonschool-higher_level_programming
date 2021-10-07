@@ -11,11 +11,13 @@ Test case:
 ==========
 
 - Checking normal use with two numbers:
+
     >>> add_int = __import__("0-add_integer")
     >>> add_int.add_integer(5, 4)
     9
 
 - It also works with floating-point values:
+
     >>> add_int.add_integer(2.0, 5)
     7
 

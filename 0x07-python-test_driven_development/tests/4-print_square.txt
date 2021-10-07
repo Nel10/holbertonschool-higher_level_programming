@@ -10,21 +10,31 @@ Test case:
 ==========
 
 - Importing the function from module
+
     >>> print_square = __import__("4-print_square").print_square
 
 - Checking if the function is not int:
+
     >>> print_square("h")
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
 
 - Checking if the function is negative
+
     >>> print_square(-4)
     Traceback (most recent call last):
     ...
     ValueError: size must be >= 0
 
 - Checking normal use the function:
+
     >>> print_square(2)
     ##
     ##
+
+- Checking when the function is empty:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
