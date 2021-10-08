@@ -1,8 +1,14 @@
 #!/usr/bin/python3
 """
+function matrix_mul
+parametres: m_a, m_b
+Return matrix mul
 """
+
+
 def matrix_mul(m_a, m_b):
     """
+    function matrix_mul
     """
     message_m_a = "m_a should contain only integers or floats"
     message_m_b = "m_b should contain only integers or floats"
