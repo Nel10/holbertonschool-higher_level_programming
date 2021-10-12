@@ -28,3 +28,13 @@ Test Case:
     >>> my_list.print_sorted()
     [1, 2, 9]
 
+- Checking empty object
+
+    >>> obje = MyList()
+
+    >>> print(obje)
+    []
+    
+    >>> obje.print_sorted()
+    []
+
