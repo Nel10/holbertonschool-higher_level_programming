@@ -43,3 +43,15 @@ Test Case:
     ...
     NameError: name 'NULL' is not defined
 
+    >>> print(obje)
+    []
+
+- Checking None object
+
+    >>> obje.append(None)
+
+    >>> print(obje)
+    [None]
+
+    >>> obje.print_sorted()
+    [None]
