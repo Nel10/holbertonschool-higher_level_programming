@@ -11,4 +11,4 @@ def read_file(filename=""):
     """
     with open("my_file_0.txt", encoding="UTF8") as archivo:
         for line in archivo:
-            print(line)
+            print(line, end="")
