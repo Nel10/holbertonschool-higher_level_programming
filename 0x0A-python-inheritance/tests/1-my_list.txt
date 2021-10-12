@@ -55,3 +55,10 @@ Test Case:
 
     >>> obje.print_sorted()
     [None]
+
+- Checking NaN object
+
+    >>> obje.append(NaN)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'NaN' is not defined
