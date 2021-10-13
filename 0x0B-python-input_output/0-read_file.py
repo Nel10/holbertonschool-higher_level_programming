@@ -9,5 +9,5 @@ def read_file(filename=""):
     """
     function print a file
     """
-    with open("my_file_0.txt", encoding="utf-8") as archive:
+    with open("my_file_0.txt", "r", encoding="utf-8") as archive:
         print(archive.read(), end="")
