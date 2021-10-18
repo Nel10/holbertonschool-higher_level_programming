@@ -89,3 +89,15 @@ class Rectangle(Base):
         string = string.format(self.id, self.__x, self.__y, self.__width,
                                self.__height)
         return string
+
+    def update(self, *args):
+        """"""
+        list = ["id", "width", "height", "x", "y"]
+        if args is not None:
+            if len(list) > len(args):
+                max_len = len(args)
+            else:
+                max_len = len(list)
+            for i in range(max_len):
+                setattr(self, )
+
