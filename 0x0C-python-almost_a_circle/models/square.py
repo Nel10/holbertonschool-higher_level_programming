@@ -42,3 +42,12 @@ class Square(Rectangle):
             for key in kwargs:
                 if hasattr(self, key) is True:
                     setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        """function dictionary"""
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
