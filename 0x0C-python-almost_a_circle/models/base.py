@@ -34,3 +34,10 @@ class Base:
                 li_o.append(cls.to_dictionary(i))
         with open(filename, 'w') as f:
             f.write(cls.to_json_string(li_o))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """return the list json string"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
