@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
+Created base class
 """
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """"""
+    """Define Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """"""
+        """iniciatialize"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -17,12 +18,10 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -90,14 +89,17 @@ class Rectangle(Base):
                                self.__height)
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """"""
         list = ["id", "width", "height", "x", "y"]
-        if args is not None:
+        if args and args[0] is not None:
             if len(list) > len(args):
                 max_len = len(args)
             else:
                 max_len = len(list)
             for i in range(max_len):
-                setattr(self, )
-
+                setattr(self, list[i], args[i])
+        elif kwargs is not None:
+            for key in kwargs:
+                if hasattr(self, key) is True:
+                    setattr(self, key, kwargs[key])
