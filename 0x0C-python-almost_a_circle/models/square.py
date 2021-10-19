@@ -27,3 +27,18 @@ class Square(Rectangle):
         string = "[Square] ({:d}) {:d}/{:d} - {:d}"
         string = string.format(self.id, self.x, self.y, self.width)
         return string
+
+    def update(self, *args, **kwargs):
+        """function update"""
+        list = ["id", "size", "x", "y"]
+        if args and args[0] is not None:
+            if len(list) > len(args):
+                max_len = len(args)
+            else:
+                max_len = len(list)
+            for i in range(max_len):
+                setattr(self, list[i], args[i])
+        elif kwargs is not None:
+            for key in kwargs:
+                if hasattr(self, key) is True:
+                    setattr(self, key, kwargs[key])
