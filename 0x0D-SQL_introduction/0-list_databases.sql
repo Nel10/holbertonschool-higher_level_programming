@@ -1,3 +1,3 @@
---script that lists all databases
---on server
+-- script that lists all databases
+-- on server
 SHOW DATABASES;
