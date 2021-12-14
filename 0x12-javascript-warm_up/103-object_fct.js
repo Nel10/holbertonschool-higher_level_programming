@@ -7,7 +7,6 @@ console.log(myObject);
 myObject.incr = function () {
   myObject.value += 1;
 };
-console.log('incr: ' + myObject.value);
 myObject.incr();
 console.log(myObject);
 myObject.incr();
