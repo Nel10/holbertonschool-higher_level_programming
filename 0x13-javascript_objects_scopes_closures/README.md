@@ -1,6 +1,6 @@
 # 0x13. JavaScript - Objects, Scopes and Closures
 ## Details
-      By Guillaume          Weight: 1              Ongoing second chance project - started 12-14-2021, must end by 12-16-2021 (in about 12 hours)          - you're done with 100% of tasks.              QA review fully automated.      #### In a nutshell…
+      By Guillaume          Weight: 1              Ongoing second chance project - started 12-14-2021, must end by 12-16-2021 (in about 6 hours)          - you're done with 200% of tasks.              QA review fully automated.      #### In a nutshell…
 * Auto QA review:          116.0/116 mandatory            &            0.0/29 optional      
 * Altogether:         100.0%* Mandatory: 100.0%
 * Optional: 0.0%
@@ -647,9 +647,3 @@ guillaume@ubuntu:~/0x13$
 * Directory:  ` 0x13-javascript_objects_scopes_closures ` 
 * File:  ` 102-concat.js ` 
  Self-paced manual review  Panel footer - Controls 
-×#### Recommended Sandbox
-[Running only]() 
-### 1 image(0/5 Sandboxes spawned)
-### Ubuntu 14.04 - NodeJS 10
-Ubuntu 14.04 with NodeJS 10
-[Run]() 
