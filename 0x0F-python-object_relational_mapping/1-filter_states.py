@@ -14,6 +14,7 @@ if __name__ == "__main__":
             "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER by id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        if 'N' == row[1][0]:
+            print(row)
     cur.close()
     conn.close()
