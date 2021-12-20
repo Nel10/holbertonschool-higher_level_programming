@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+that prints all City objects from the database hbtn_0e_14_usa
+"""
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from sys import argv
