@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-that prints all City objects from the database hbtn_0e_14_usa
+prints all City objects from the database hbtn_0e_14_usa
 """
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -10,7 +10,6 @@ from sqlalchemy import create_engine
 from model_state import Base, State
 from model_city import City
 from sqlalchemy.orm import sessionmaker
-Base = declarative_base()
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
