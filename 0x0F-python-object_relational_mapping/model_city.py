@@ -1,4 +1,8 @@
 #!/usr/bin/phyton3
+"""
+contains the class definition of a City
+"""
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.sql.schema import ForeignKey
