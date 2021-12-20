@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+script that prints the State object with the name passed
+as argument from the database hbtn_0e_6_usa
+"""
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from sys import argv
