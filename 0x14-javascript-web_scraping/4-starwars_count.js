@@ -1,15 +1,23 @@
 #!/usr/bin/node
-const request = require('request');
-const URL = process.argv[2];
-request(URL, function (err, response, body) {
-  if (err) { console.error(err); }
-  const films = JSON.parse(body);
-  const character = 'https://swapi-api.hbtn.io/api/people/18/';
-  let number = 0;
-  for (let film = 0; film < films.count; film++) {
-    if (films.results[film].characters.indexOf(character) !== -1) {
-      number += 1;
+const args = process.argv;
+let reqURL = args[2];
+let request = require('request');
+request(reqURL, function (error, response, body) {
+  if (error) {
+    console.log('error:', error);
+  } else {
+    let jso = JSON.parse(body);
+    let results = jso['results'];
+    let count = 0;
+    for (let i = 0; i < results.length; i++) {
+      let chars = (results[i]['characters']);
+      for (let j = 0; j < chars.length; j++) {
+        let check18 = chars[j].endsWith('18/');
+        if (check18) {
+          count++;
+        }
+      }
     }
+    console.log(count);
   }
-  console.log(number);
 });
