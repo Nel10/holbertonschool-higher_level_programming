@@ -1,19 +1,21 @@
 #!/usr/bin/node
-const { get } = require('request');
-const { writeFile } = require('fs');
-const { argv } = require('process');
+const url = process.argv[2];
+const request = require('request');
 
-const url = argv[2];
-const filename = argv[3];
-
-get(url, (err, res, body) => {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  writeFile(filename, body, 'utf8', err => {
-    if (err) {
-      console.log(err);
+request(url, function (error, response, body) {
+  if (error) {
+    console.error('error:', error);
+  } else {
+    const jsonBody = JSON.parse(body);
+    const dict = {};
+    for (const task of jsonBody) {
+      if (task.completed === true) {
+        if (dict[task.userId] === undefined) {
+          dict[task.userId] = 0;
+        }
+        dict[task.userId] += 1;
+      }
     }
-  });
-});|:WebGLQuery
+    console.log(dict);
+  }
+});
