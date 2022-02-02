@@ -1,12 +1,19 @@
 #!/usr/bin/node
-const request = require('request');
-const fs = require('fs');
-const url = process.argv[2];
-const filePath = process.argv[3];
-request(url, function (err, response, body) {
+const { get } = require('request');
+const { writeFile } = require('fs');
+const { argv } = require('process');
+
+const url = argv[2];
+const filename = argv[3];
+
+get(url, (err, res, body) => {
   if (err) {
     console.log(err);
-  } else {
-    fs.writeFile(filePath, body, 'utf-8');
+    return;
   }
-});
+  writeFile(filename, body, 'utf8', err => {
+    if (err) {
+      console.log(err);
+    }
+  });
+});|:WebGLQuery
